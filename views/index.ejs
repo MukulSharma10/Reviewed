@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviewed</title>
+    <link rel="stylesheet" href="/public/styles/style.css">
+    <%- include("partials/header.ejs") %>
+</head>
+<body>
+    <h1>Welcome to Reviewed</h1>
+    <h2>Home for your movie reviews. Just make sure to be short!</h2>
+    <form action="">
+        <label for="">Review Title</label>
+        <input type="text" placeholder="Your Title goes here..." required>
+
+        <label for="">Review Description</label>
+        <textarea name="reviewDes" id="" placeholder="Your Review goes here..." rows="6" required>
+        </textarea>
+        <input type="submit" value="Post">
+    </form>
+    
+</body>
+<%- include("partials/footer.ejs") %>
+</html>
