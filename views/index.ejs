@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reviewed</title>
+    <%- include("partials/header.ejs") %>
 </head>
 <body>
-    <h1>All Posts</h1>
+    <h1>Your Reviews</h1>
     <a href="/new-post">Create new Review</a>
     <ul>
         <% posts.forEach(post => { %>
@@ -21,4 +22,5 @@
         <% }) %>
     </ul>
 </body>
+<%- include("partials/footer.ejs") %>
 </html>

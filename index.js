@@ -34,6 +34,10 @@ app.post('/delete', (req, res) => {
     res.redirect('/')
 })
 
+app.get("/about", (req,res)=>{
+    res.render("contact.ejs")
+})
+
 app.listen(port, ()=>{
     console.log(`Server running at ${port}`)
 })
