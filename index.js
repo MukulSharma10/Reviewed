@@ -5,9 +5,13 @@ const app = express()
 const port = 3000
 
 app.use(express.static("public"))
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 
-const posts = []
+let posts = []
+
+app.get("/", (req, res)=>{
+    res.render("index.ejs", { posts })
+})
 
 app.get("/new-post", (req,res)=>{
     res.render("new-post.ejs")
@@ -20,11 +24,14 @@ app.post("/new-post", (req, res)=>{
         createdAt: new Date() 
     }
     posts.push(newPost)
+    console.log(posts)
     res.redirect('/')
 })
 
-app.get("/", (req, res)=>{
-    res.render("index.ejs", { posts: posts })
+app.post('/delete', (req, res) => {
+    const {index} = req.body
+    posts.splice(index, 1)
+    res.redirect('/')
 })
 
 app.listen(port, ()=>{
