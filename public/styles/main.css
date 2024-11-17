@@ -1,10 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&display=swap');
 
-.site-identity{
+.site-identity-header{
     color: white;
 }
 
-.site-identity a{
+.site-identity-footer{
+    position:fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+
+}
+
+.site-title{
+    background-color: black;
+    padding: 8px 8px 8px 8px;
+}
+
+.site-title a{
     color: white;
     text-decoration: none;
 }
@@ -21,7 +36,8 @@ body{
 }
 
 nav{
-    background-color: rgb(0, 0, 61);
+    background-color: rgb(0, 0, 0);
+    border: 3px solid red;
     overflow: hidden;
 }
 
@@ -35,11 +51,12 @@ nav a{
 }
 
 nav a:hover{
-    background-color: black;
+    background-color: red;
 }
 
 nav a.active{
     color: white;
+    background-color: rgba(255, 0, 0, 0.566);
 }
 
 
@@ -49,7 +66,23 @@ ul{
     padding: 0;
 }
 
-.link{
+a.link{
     text-decoration: none;
+    color: rgb(134, 29, 29)
+}
+
+.main-page{
+    text-align: center;
     color: white;
+}
+
+img{
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 3px;
+}
+
+.about-content{
+    color: white;
+    text-align: center;
 }

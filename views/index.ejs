@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>Your Reviews</h1>
+    <div class="main-page">
     <a class="link" href="/new-post">Create new Review</a>
     <ul>
         <% posts.forEach(post => { %>
@@ -21,6 +22,7 @@
             </li>
         <% }) %>
     </ul>
+    </div>
 </body>
 <%- include("partials/footer.ejs") %>
 </html>

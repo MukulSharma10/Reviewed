@@ -1,5 +1,4 @@
 import express from "express"
-import bodyParser from "body-parser"
 
 const app = express()
 const port = 3000
@@ -35,7 +34,7 @@ app.post('/delete', (req, res) => {
 })
 
 app.get("/about", (req,res)=>{
-    res.render("contact.ejs")
+    res.render("about.ejs")
 })
 
 app.listen(port, ()=>{
